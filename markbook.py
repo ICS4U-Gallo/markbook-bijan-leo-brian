@@ -46,7 +46,7 @@ def add_student_to_classroom(student: Dict, classroom: Dict):
 
 def remove_student_from_classroom(student: Dict, classroom: Dict):
 
-  del classroom['student']
+  classroom['student_list'].remove(student)
   return classroom
 
 def edit_student(student: Dict, **kwargs: Dict):
