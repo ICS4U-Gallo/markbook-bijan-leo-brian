@@ -21,6 +21,8 @@ def create_classroom(course_code: str, course_name: str, period: int, teacher: s
     "period": period,
     "teacher": teacher
   }
+  student_list = []
+  assignment_list = []
   return classroom
 
 
