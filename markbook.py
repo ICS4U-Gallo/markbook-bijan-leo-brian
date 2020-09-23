@@ -6,46 +6,46 @@ from typing import Dict
 
 
 def create_assignment(name: str, due: str, points: int) -> Dict:
-    """Creates an assignment represented as a dictionary
-    
-    Args:
-        name: the name of the assignment.
-        due: the due date for the assignment.
-        points: what the assignment is out of (denominator).
-    Returns:
-        Assignment as a dictionary.
-    """
-    return {}
+  assignment = {}
+  assignment['assignment_name'] = name
+  assignment['assignment_due'] = due
+  assignment['assignment_points'] = points
+
+  return assignment
 
 
 def create_classroom(course_code: str, course_name: str, period: int, teacher: str) -> Dict:
-    """Creates a classroom dictionary"""
-    return {}
+  classroom = {}
+  classroom['course_code'] = course_code
+  classroom['course_name'] = course_name
+  classroom['period'] = period
+  classroom['teacher'] = teacher
+  
+  return classroom
 
 
-def calculate_average_mark(student: Dict) -> float:
-    """Calculates the average mark of a student"""
-    return 0
+def test_calculate_average_mark(student: Dict) -> float:
+  total = 0
+  counter = 0
+  for i in student['marks']:
+    total += i
+    counter += 1
+  average_mark = total / counter
+
+  return average_mark
 
 
 def add_student_to_classroom(student: Dict, classroom: Dict):
-    """Adds student to a classroom
 
-    Args:
-        student: Student dict
-        classroom: The classroom to add the student to
-    """
-    pass
+  classroom['student_list'].append(student)
+  return classroom
+    
 
 
 def remove_student_from_classroom(student: Dict, classroom: Dict):
-    """Removes student from classroom
 
-    Args:
-        student: The student to be removed
-        classroom: the class from which the student will be removed.
-    """
-    pass
+  del classroom['student']
+  return classroom
 
 
 def edit_student(student: Dict, **kwargs: Dict):
