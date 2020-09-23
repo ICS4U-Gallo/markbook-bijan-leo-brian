@@ -6,21 +6,22 @@ from typing import Dict
 
 
 def create_assignment(name: str, due: str, points: int) -> Dict:
-  assignment = {}
-  assignment['assignment_name'] = name
-  assignment['assignment_due'] = due
-  assignment['assignment_points'] = points
-
+  assignment = {
+    "name": name, 
+    "due": due,
+    "points": points
+    }
   return assignment
 
 
 def create_classroom(course_code: str, course_name: str, period: int, teacher: str) -> Dict:
-  classroom = {}
-  classroom['course_code'] = course_code
-  classroom['course_name'] = course_name
-  classroom['period'] = period
-  classroom['teacher'] = teacher
-  
+  classroom = {
+    "course_code" : course_code,
+    "course_name": course_name, 
+    "period" : period,
+    "teacher": teacher,
+    "students": students 
+    }
   return classroom
 
 
@@ -46,7 +47,6 @@ def remove_student_from_classroom(student: Dict, classroom: Dict):
 
   del classroom['student']
   return classroom
-
 
 def edit_student(student: Dict, **kwargs: Dict):
     """Edits the student's info with the provided key/value pairs
