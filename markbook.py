@@ -19,10 +19,10 @@ def create_classroom(course_code: str, course_name: str, period: int, teacher: s
     "course_code": course_code,
     "course_name": course_name, 
     "period": period,
-    "teacher": teacher
+    "teacher": teacher,
+    "student_list": [],
+    "assignment_list": []
   }
-  student_list = []
-  assignment_list = []
   return classroom
 
 
