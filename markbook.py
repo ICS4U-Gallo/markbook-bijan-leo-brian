@@ -10,7 +10,7 @@ def create_assignment(name: str, due: str, points: int) -> Dict:
     "name": name, 
     "due": due,
     "points": points
-    }
+  }
   return assignment
 
 
@@ -21,7 +21,7 @@ def create_classroom(course_code: str, course_name: str, period: int, teacher: s
     "period" : period,
     "teacher": teacher,
     "students": students 
-    }
+  }
   return classroom
 
 
